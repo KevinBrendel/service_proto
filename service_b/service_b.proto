@@ -1,5 +1,5 @@
 syntax = "proto3";
-package ServiceB;
+package service_b;
 
 import "common/c.proto";
 
