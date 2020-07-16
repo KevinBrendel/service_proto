@@ -1,0 +1,23 @@
+syntax = "proto3";
+package ServiceProto;
+
+import "common/common_message_types.proto";
+
+option go_package = "github.com/KevinBrendel/service_proto";
+
+service ServiceA {
+	rpc getCommonObject(RequestObject) returns (CommonObject);
+	rpc getServiceObject(RequestObject) returns (ServiceAObject);
+	rpc getCombinedObject(RequestObject) returns (CombinedObject);
+}
+
+message ServiceAObject {
+	int64 id = 1;
+	string name = 2;
+	bool condition = 3;
+}
+
+message CombinedObject {
+	CommonObject commonObject = 1;
+	ServiceAObject serviceObject = 2;
+}
