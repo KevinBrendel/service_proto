@@ -1,7 +1,7 @@
 syntax = "proto3";
-package ServiceProto;
+package Common;
 
-option go_package = "github.com/KevinBrendel/service_proto";
+option go_package = "github.com/KevinBrendel/service_proto/common";
 
 message CommonObject {
 	int64 id = 1;

@@ -1,9 +1,9 @@
 syntax = "proto3";
-package ServiceProto;
+package ServiceA;
 
-import "common/common_message_types.proto";
+import "common/c.proto";
 
-option go_package = "github.com/KevinBrendel/service_proto";
+option go_package = "github.com/KevinBrendel/service_proto/service_a";
 
 service ServiceA {
 	rpc getCommonObject(RequestObject) returns (CommonObject);
