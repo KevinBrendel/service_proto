@@ -6,9 +6,9 @@ import "common/c.proto";
 option go_package = "github.com/KevinBrendel/service_proto/service_a";
 
 service ServiceA {
-	rpc getCommonObject(RequestObject) returns (CommonObject);
-	rpc getServiceObject(RequestObject) returns (ServiceAObject);
-	rpc getCombinedObject(RequestObject) returns (CombinedObject);
+	rpc getCommonObject(common.RequestObject) returns (common.CommonObject);
+	rpc getServiceObject(common.RequestObject) returns (ServiceAObject);
+	rpc getCombinedObject(common.RequestObject) returns (CombinedObject);
 }
 
 message ServiceAObject {
@@ -18,6 +18,6 @@ message ServiceAObject {
 }
 
 message CombinedObject {
-	CommonObject commonObject = 1;
+	common.CommonObject commonObject = 1;
 	ServiceAObject serviceObject = 2;
 }
