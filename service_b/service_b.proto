@@ -5,7 +5,7 @@ import "common/c.proto";
 
 option go_package = "github.com/KevinBrendel/service_proto/service_b";
 
-service ServiceA {
+service ServiceB {
 	rpc getCommonObject(common.RequestObject) returns (common.CommonObject);
 	rpc getServiceObject(common.RequestObject) returns (ServiceBObject);
 	rpc getCombinedObject(common.RequestObject) returns (CombinedObject);
