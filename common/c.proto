@@ -8,4 +8,4 @@ message CommonObject {
   string name = 2;
 }
 
-message RequestObject { int64 clientId = 1; }
+message RequestObject { int64 client_id = 1; }

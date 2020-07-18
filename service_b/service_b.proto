@@ -3,21 +3,11 @@ package service_b;
 
 import "common/c.proto";
 
-option go_package = "github.com/KevinBrendel/service_proto/service_b";
+option go_package = "github.com/phev8/go_service_B/pkg/api";
 
-service ServiceB {
-	rpc getCommonObject(common.RequestObject) returns (common.CommonObject);
-	rpc getServiceObject(common.RequestObject) returns (ServiceBObject);
-	rpc getCombinedObject(common.RequestObject) returns (CombinedObject);
-}
+service ServiceB { rpc getData(common.RequestObject) returns (DataObject); }
 
-message ServiceBObject {
-	int64 id = 1;
-	string name = 2;
-	string alias = 3;
-}
-
-message CombinedObject {
-	common.CommonObject commonObject = 1;
-	ServiceBObject serviceObject = 2;
+message DataObject {
+  int64 counter = 1;
+  common.CommonObject common_object = 2;
 }
