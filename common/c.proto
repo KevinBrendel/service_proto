@@ -1,14 +1,11 @@
 syntax = "proto3";
 package common;
 
-option go_package = "github.com/KevinBrendel/service_proto/common";
+option go_package = "github.com/phev8/go_commons/pkg/api/shared";
 
 message CommonObject {
-	int64 id = 1;
-	string name = 2;
+  int64 id = 1;
+  string name = 2;
 }
 
-message RequestObject {
-	int64 clientId = 1;
-}
-
+message RequestObject { int64 clientId = 1; }
